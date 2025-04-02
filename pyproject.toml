@@ -1,0 +1,12 @@
+[project]
+name = "sensive-blog"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.6"
+dependencies = [
+    "django==3.1.*",
+    "environs[django]==9.3.0",
+    "pillow>=11.1.0",
+    "setuptools>=78.1.0",
+]
