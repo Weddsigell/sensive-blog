@@ -9,7 +9,6 @@ class Post(models.Model):
     slug = models.SlugField('Название в виде url', max_length=200)
     image = models.ImageField('Картинка')
     published_at = models.DateTimeField('Дата и время публикации')
-
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
