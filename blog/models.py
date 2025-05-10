@@ -4,11 +4,9 @@ from django.contrib.auth.models import User
 
 
 class PostQuerySet(models.QuerySet):
-
-    def popular(self, field):
-        annotate_key = f'{field}_count'
-        return self.annotate(**{annotate_key: models.Count(field)}) \
-            .order_by(f'-{annotate_key}')
+    def popular(self):
+        return self.annotate(likes_count=models.Count('likes')) \
+            .order_by('-likes_count')
 
 
 class Post(models.Model):
