@@ -6,25 +6,15 @@
 
 ## Запуск
 
-Для запуска сайта вам понадобится Python третьей версии.
-
-Скачайте код с GitHub. Установите зависимости:
-
-```sh
-pip install -r requirements.txt
-```
-
-Создайте базу данных SQLite
-
-```sh
-python3 manage.py migrate
-```
-
-Запустите разработческий сервер
-
-```
-python3 manage.py runserver
-```
+1. Для запуска сайта вам понадобится UV. Как установить вы найдете тут https://github.com/astral-sh/uv.
+2. Создайте базу данных SQLite
+    ```
+    uv run manage.py migrate
+    ```
+3. Запустите разработческий сервер
+    ```
+    uv run manage.py runserver
+    ```
 
 ## Переменные окружения
 
